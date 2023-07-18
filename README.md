@@ -16,3 +16,7 @@ podman run --privileged --user root --device /dev/fuse -d --name fpj-root --rm  
 I don't think `--device /dev/fuse` is necessary.  Also could be nice to mount volumes for e.g. `/var/lib/containers`
 
 I tried to do rootless-in-rootless but kept hitting uidmap-related issues.  I'll need to get my head around that stuff more if I want to push on that route.  Seems to possibly be related to systemd, since we're running systemd in a container here (because Jenkins wants to be able to restart).  We could play around with another init system like [s6-overlay](https://github.com/just-containers/s6-overlay) as well but I didn't have time to dive into that too deep.
+
+## Debugging/going through
+
+- Install git lol
