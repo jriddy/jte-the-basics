@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Adapted from https://github.com/containers/podman/blob/5c302db5066fea7ba0e2dd348f568adcd55ca23c/docker.in
+
+ETCDIR=/etc
+BINDIR=/usr/bin
+
+exec sudo ${BINDIR}/podman "$@"
